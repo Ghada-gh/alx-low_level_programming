@@ -5,7 +5,8 @@
 /* more headers goes there */
 
 /**
- * main - prints the last digit of a random number and compare it to some conditions. Return: 0 if successful
+ * main - prints the last digit of a random number and compare it to some conditions.
+ * Return: 0 if successful
  */
 
 int main(void)
