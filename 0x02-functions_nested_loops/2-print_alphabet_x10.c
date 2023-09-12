@@ -6,10 +6,11 @@ void print_alphabet_x10(void);
 /*int _putchar(char c);
  */
 
-/** 
- * print_alphabet - prints the alphabet in lowercase 10 times
- * Return: void
+/**
+ *print alphabet ten times
+ *return: void
  */
+
 void print_alphabet_x10(void)
 {
   char c;
