@@ -3,10 +3,12 @@
 #include "main.h"
 
 void print_alphabet_x10(void);
-int _putchar(char c);
-/**                                                                                                                                            
- * print_alphabet - prints the alphabet in lowercase 10 times*                                                                                          
- * Return: void                                                                                                                                
+/*int _putchar(char c);
+ */
+
+/** 
+ * print_alphabet - prints the alphabet in lowercase 10 times
+ * Return: void
  */
 void print_alphabet_x10(void)
 {
