@@ -11,8 +11,6 @@ void print_alphabet_x10(void);
  */
 
 /**
- * print_alphabet_x10 the alphabet in lowercase 10 times.
- *
  * This function prints the alphabet in lowercase 10 times, followed by a new line after each iteration.
  *
  * Return: always 0.
