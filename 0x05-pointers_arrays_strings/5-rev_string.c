@@ -7,9 +7,9 @@ void rev_string(char *s);
 /**
  * reverses the string pointed to by s
  *
- * @param s: a pointer to the string to reverse
+ * @s: a pointer to the string to reverse
  *
- * @return: void
+ * Return: void
  */
 
 void rev_string(char *s)
