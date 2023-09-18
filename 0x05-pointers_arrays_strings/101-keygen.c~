@@ -1,0 +1,30 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+char *generate_password(void);
+
+/**
+ * generate_password - Generates a random valid password for the program 101-crackme.
+ *
+ * Return: A randomly generated valid password.
+ */
+char *generate_password(void)
+{
+  char *password;
+  int i;
+
+  password = malloc(sizeof(char) * 8);
+  if (password == NULL)
+    return (NULL);
+
+  srand(time(NULL)); // Seed the random number generator
+
+  for (i = 0; i < 8; i++)
+    {
+      password[i] = (rand() % 26) + 'a'; // Generate a random lowercase letter
+    }
+
+  return (password);
+}
