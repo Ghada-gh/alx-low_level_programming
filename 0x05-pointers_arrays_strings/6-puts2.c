@@ -1,13 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 
-void rev_string(char *s);
+void puts2(char *str);
 
 /**
- * rev_string - prints every other character of a string, starting with the first character,
- * followed by a new line
- *
- * @str: a pointer to the string to print
+ * puts2 - Prints every other character of a string, starting with the first character,
+ *         followed by a new line.
+ * @str: A pointer to the string to print.
  *
  * Return: void
  */
