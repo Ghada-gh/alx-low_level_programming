@@ -25,7 +25,7 @@ int main(void)
   char *password;
   srand(time(NULL));
   password = generate_password();
-  printf("./101-crackme \"%s\"\n", password);
+  printf("./101-crackme \"%s\"\nTada! Congrats\n", password);
   free(password);
   return (0);
 }
