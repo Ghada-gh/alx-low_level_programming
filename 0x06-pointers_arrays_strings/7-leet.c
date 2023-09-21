@@ -3,45 +3,50 @@
 #include <stdlib.h>
 #include <string.h>
 
-/**
- * 
- *leet - Function to encode a string into 1337.
- *
- * @param str - The string to be encoded.
- * Return - The encoded string.
- */
-char *leet(char *str) {
-  int i, j;
-  char *leet_str = (char *) malloc(strlen(str) + 1);
+char *leet(char *s);
 
-  for (i = 0, j = 0; str[i] != '\0'; i++)
+/**
+ * leet - encodes a string into 1337
+ * @s: the string to encode
+ *
+ * Return: the encoded string
+ */
+
+char *leet(char *s)
+{
+  int i, j;
+  char leet[] = {'4', '3', '0', '7', '1'};
+
+  for (i = 0; s[i] != '\0'; i++)
     {
-      if (str[i] == 'a' || str[i] == 'A')
-	{
-	  leet_str[j++] = '4';
-	}
-      else if (str[i] == 'e' || str[i] == 'E')
-	{
-	  leet_str[j++] = '3';
-	}
-      else if (str[i] == 'o' || str[i] == 'O')
-	{
-	  leet_str[j++] = '0';
-        }
-      else if (str[i] == 't' || str[i] == 'T')
-	{
-	  leet_str[j++] = '7';
-        }
-      else if (str[i] == 'l' || str[i] == 'L')
-	{
-	  leet_str[j++] = '1';
-        }
-      else
-	{
-	  leet_str[j++] = str[i];
+      for (j = 0; j < 5; j++)
+        {
+	  if (s[i] == 'a' || s[i] == 'A')
+            {
+	      s[i] = leet[0];
+	      break;
+            }
+	  else if (s[i] == 'e' || s[i] == 'E')
+            {
+	      s[i] = leet[1];
+	      break;
+            }
+	  else if (s[i] == 'o' || s[i] == 'O')
+            {
+	      s[i] = leet[2];
+	      break;
+            }
+	  else if (s[i] == 't' || s[i] == 'T')
+            {
+	      s[i] = leet[3];
+	      break;
+            }
+	  else if (s[i] == 'l' || s[i] == 'L')
+            {
+	      s[i] = leet[4];
+	      break;
+            }
         }
     }
-
-  leet_str[j] = '\0';
-  return leet_str;
+  return (s);
 }
