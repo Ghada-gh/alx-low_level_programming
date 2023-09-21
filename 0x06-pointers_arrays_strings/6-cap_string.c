@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
+
 char *cap_string(char *);
 
 /**
@@ -9,6 +10,7 @@ char *cap_string(char *);
  *
  * Return: A pointer to the capitalized string.
  */
+
 
 char *cap_string(char *str)
 {
