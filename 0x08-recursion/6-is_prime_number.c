@@ -3,7 +3,7 @@
 #include <math.h>
 
 int is_prime_number(int n);
-double my_sqrt(double x);
+int is_prime_number_recursive(int n, int divisor);
 
 /**
  * is_prime_number - Checks if an integer is a prime number.
@@ -11,32 +11,26 @@ double my_sqrt(double x);
  * Return: 1 if n is a prime number, otherwise 0.
  */
 
-int is_prime_number(int n)
+
+int is_prime_number_recursive(int n, int divisor)
 {
-  int i;
-  
-  if (n <= 1)
+ 
+  if (n < 2)
     {
       return (0);
     }
-  for (i = 2; i <= my_sqrt(n); i++)
+  if (divisor == 1)
     {
-      if (n % i == 0)
-	{
-	  return (0);
-        }
+      return (1);
     }
-  return (1);
+  if (n % divisor == 0)
+    {
+      return (0);
+    }
+  return is_prime_number_recursive(n, divisor - 1); 
 }
 
-double my_sqrt(double x)
+int is_prime_number(int n)
 {
-  double guess = x / 2;
-  double epsilon = 0.0001;
-
-  while (guess * guess - x > epsilon)
-    {
-      guess = (guess + x / guess) / 2;
-    }
-  return (guess);
+    return is_prime_number_recursive(n, n - 1);
 }
