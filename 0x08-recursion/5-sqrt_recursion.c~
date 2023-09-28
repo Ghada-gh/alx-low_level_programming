@@ -1,0 +1,30 @@
+#include "main.h"
+#include <stdio.h>
+
+int _sqrt_recursion(int n);
+
+/**
+ * _sqrt_recursion - Implementation of the natural square root function using recursion.
+ *
+ * @n: The number to calculate the natural square root of.
+ * Return: The natural square root of n, or -1 if n does not have a natural square root.
+ */
+
+int _sqrt_recursion(int n)
+{
+    if (n < 0)
+      {
+        return (-1);
+      }
+    if (n == 0)
+      {
+        return (0);
+      }
+    int guess = n / 2;
+
+    while (guess * guess > n + 1 || guess * guess < n - 1)
+      {
+        guess = (guess + n / guess) / 2;
+      }
+    return (guess);
+}
