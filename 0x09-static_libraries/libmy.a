@@ -1,0 +1,103 @@
+!<arch>
+0-isupper.o/    0           0     0     644     59        `
+#include <stdio.h>
+#include "main.h"
+
+int _isupper(int c);
+
+0-memset.o/     0           0     0     644     85        `
+#include <stdio.h>
+#include "main.h"
+
+char *_memset(char *s, char b, unsigned int n);
+0-strcat.o/     0           0     0     644     75        `
+#include <stdio.h>
+#include "main.h"
+
+char *_strcat(char *dest, char *src);
+1-isdigit.o/    0           0     0     644     58        `
+#include <stdio.h>
+#include "main.h"
+
+int _isdigit(int c);1-memcpy.o/     0           0     0     644     92        `
+#include <stdio.h>
+#include "main.h"
+
+char *_memcpy(char *dest, char *src, unsigned int n);
+1-strncat.o/    0           0     0     644     83        `
+#include <stdio.h>
+#include "main.h"
+
+char *_strncat(char *dest, char *src, int n);
+100-atoi.o/     0           0     0     644     57        `
+#include <stdio.h>
+#include "main.h"
+
+int _atoi(char *s);
+2-strchr.o/     0           0     0     644     69        `
+#include <stdio.h>
+#include "main.h"
+
+char *_strchr(char *s, char c);
+2-strlen.o/     0           0     0     644     59        `
+#include <stdio.h>
+#include "main.h"
+
+int _strlen(char *s);
+2-strncpy.o/    0           0     0     644     83        `
+#include <stdio.h>
+#include "main.h"
+
+char *_strncpy(char *dest, char *src, int n);
+3-islower.o/    0           0     0     644     58        `
+#include <stdio.h>
+#include "main.h"
+
+int _islower(int c);3-puts.o/       0           0     0     644     58        `
+#include <stdio.h>
+#include "main.h"
+
+void _puts(char *s);3-strcmp.o/     0           0     0     644     70        `
+#include <stdio.h>
+#include "main.h"
+
+int _strcmp(char *s1, char *s2);3-strspn.o/     0           0     0     644     83        `
+#include <stdio.h>
+#include "main.h"
+
+
+unsigned int _strspn(char *s, char *accept);
+4-isalpha.o/    0           0     0     644     58        `
+#include <stdio.h>
+#include "main.h"
+
+int _isalpha(int c);4-strpbrk.o/    0           0     0     644     76        `
+#include <stdio.h>
+#include "main.h"
+
+char *_strpbrk(char *s, char *accept);5-strstr.o/     0           0     0     644     82        `
+#include <stdio.h>
+#include "main.h"
+
+char *_strstr(char *haystack, char *needle);6-abs.o/        0           0     0     644     54        `
+#include <stdio.h>
+#include "main.h"
+
+int _abs(int n);9-strcpy.o/     0           0     0     644     75        `
+#include <stdio.h>
+#include "main.h"
+
+char *_strcpy(char *dest, char *src);
+_putchar.o/     0           0     0     644     259       `
+#include <unistd.h>
+
+/**
+ * _putchar - Writes a character to the standard output.
+ * @c: The character to write.
+ *
+ * Return: On success, returns the number of characters written. On error, returns -1.
+ */
+int _putchar(char c)
+{
+  return (write(1, &c, 1));
+}
