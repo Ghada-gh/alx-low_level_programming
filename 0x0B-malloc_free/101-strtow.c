@@ -1,0 +1,55 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void free_grid(int **grid, int height);
+int **alloc_grid(int width, int height);
+char **strtow(char *str);
+
+/**
+ * strtow - Splits a string into words.
+ * @str: The string to split
+ *
+ * Return: a pointer to an array of strings (words)
+ * Each element of this array should contain a single word, null-terminated
+ * The last element of the returned array should be NULL
+ * Words are separated by spaces
+ * Returns NULL if str == NULL or str == ""
+ * If your function fails, it should return NULL
+ */
+char **strtow(char *str)
+{
+  char **tab;
+  int i, j, k;
+
+  if (str == NULL || str[0] == '\0')
+    return (NULL);
+  tab = malloc(sizeof(char *));
+  if (tab == NULL)
+    return (NULL);
+  tab[0] = NULL;
+  i = 0;
+  while (str[i] != '\0')
+    {
+      while (str[i] == ' ')
+	i++;
+      if (str[i] == '\0')
+	break;
+      j = i;
+      while (str[j] != ' ' && str[j] != '\0')
+	j++;
+      tab = realloc(tab, (i + 2) * sizeof(char *));
+      if (tab == NULL)
+	return (NULL);
+      tab[i + 1] = NULL;
+      tab[i] = malloc(j - i + 1);
+      if (tab[i] == NULL)
+	return (NULL);
+      for (k = 0; k < j - i; k++)
+	tab[i][k] = str[i + k];
+      tab[i][k] = '\0';
+      i = j;
+    }
+  return (tab);
+}
