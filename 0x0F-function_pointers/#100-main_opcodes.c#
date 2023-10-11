@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void print_opcodes(int number_of_bytes);
+
+/**
+ * print_opcodes - prints the opcodes of its own main function.
+ * @number_of_bytes: integer.
+ * Return: opcodes.
+ */
+
+void print_opcodes(int number_of_bytes)
+{
+  if (number_of_bytes < 0)
