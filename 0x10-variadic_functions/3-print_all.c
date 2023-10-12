@@ -15,31 +15,36 @@ void print_all(const char * const format, ...)
   int i = 0;
 
   va_start(args, format);
+
   while (format[i])
     {
       if (format[i] == 'c')
         {
 	  char c = (char)va_arg(args, int);
-	  printf("%c, ", c);
+	  printf("%c", c);
         }
       else if (format[i] == 'i')
         {
 	  int n = va_arg(args, int);
-	  printf("%d, ", n);
+	  printf("%d", n);
         }
       else if (format[i] == 'f')
         {
 	  float f = (float)va_arg(args, double);
-	  printf("%f, ", f);
+	  printf("%f", f);
         }
       else if (format[i] == 's')
         {
 	  char *s = va_arg(args, char *);
 	  if (s == NULL)
-	    printf("(nil), ");
+	    printf("(nil)");
 	  else
-	    printf("%s, ", s);
+	    printf("%s", s);
         }
+
+      if (format[i + 1])
+	printf(", ");
+
       i++;
     }
   printf("\n");
